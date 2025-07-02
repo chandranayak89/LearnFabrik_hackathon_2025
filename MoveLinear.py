@@ -1,10 +1,10 @@
-from robot import Robot
+from neurapy.robot import Robot
 import time
 
 # Initializing the robot and setting it to Automatic mode
 r = Robot()
 r.set_mode("Automatic")
-time.sleep(10)
+time.sleep(1)
 
 # Moving the robot to Initial position
 joint_property = {

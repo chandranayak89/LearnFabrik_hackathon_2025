@@ -1,4 +1,4 @@
-from robot import Robot
+from neurapy.robot import Robot
 import time
 
 # Initializing the robot and setting it to Automatic mode
