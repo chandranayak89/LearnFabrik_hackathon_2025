@@ -1,16 +1,15 @@
-from robot import Robot
+from neurapy.robot import Robot
 import numpy as np
 import copy
 import time
-
 r = Robot()
 print(r.robot_name)
 print(r.dof)
 print(r.payload)
 r.power_on()
 # Defining points
-pick_pos = [0.36, 0.36, 0.5, np.pi, 0, np.pi]  # define pickup point here
-place_pos = [0.36, -0.36, 0.5, np.pi, 0, np.pi]  # define placing point here
+pick_pos = [0.32, 0.32, 0.2, np.pi, 0, np.pi]  # define pickup point here
+place_pos = [0.32, -0.32, 0.2, np.pi, 0, np.pi]  # define placing point here
 offset_pick_pos = copy.deepcopy(pick_pos)
 offset_pick_pos[2] = offset_pick_pos[2] + 0.1
 offset_place_pos = copy.deepcopy(place_pos)

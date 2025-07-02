@@ -1,14 +1,13 @@
-from robot import Robot
+from neurapy.robot import Robot
 import numpy as np
 import time
-
 r = Robot()
 print(r.robot_name)
 print(r.dof)
 print(r.payload)
 r.power_on()
-pick_pos = [0.36, 0.36, 0.5, np.pi, 0, np.pi]  # define pickup point here
-place_pos = [0.36, -0.36, 0.5, np.pi, 0, np.pi]  # define placing point here
+pick_pos = [0.32, 0.32, 0.2, np.pi, 0, np.pi]  # define pickup point here
+place_pos = [0.32, -0.32, 0.2, np.pi, 0, np.pi]  # define placing point here
 
 def save_point(target_end_effector_pose, target, reference_joint_angles=r.get_point('Home', representation='Joint')):
     for i in range(2):
@@ -29,14 +28,14 @@ r.set_joint_speed(50)
 r.set_joint_acceleration(50)
 r.move_joint("Home")
 r.move_linear(["Home", "Pi1"])
-r.set_override(0.5)
+r.set_override(0.2)
 r.move_linear(["Pi1", "Pi0"])
 r.grasp()
 time.sleep(1)
 r.move_linear(["Pi0", "Pi1"])
 r.set_override(1)
 r.move_linear(["Pi1", "Pl1"])
-r.set_override(0.5)
+r.set_override(0.2)
 r.move_linear(["Pl1", "Pl0"])
 r.release()
 time.sleep(1)
