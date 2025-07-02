@@ -4,6 +4,7 @@ import numpy as np
 import copy
 import time
 import random
+
 # Initialize the robot
 r = Robot()
 r.switch_to_automatic_mode()
@@ -11,16 +12,16 @@ home = r.get_point('Home', representation='Cartesian')
 home_joint = r.get_point('Home', representation='Joint')
 # Define pick and place positions
 pick_pos = [
-    [0.32, 0.32, 0.2, np.pi, 0, np.pi],
-    [0.31, 0.31, 0.2, np.pi, 0, np.pi],
-    [0.32, 0.31, 0.2, np.pi, 0, np.pi],
-    [0.31, 0.32, 0.2, np.pi, 0, np.pi]
+    [0.36, 0.36, 0.5, np.pi, 0, np.pi],
+    [0.45, 0.45, 0.5, np.pi, 0, np.pi],
+    [0.36, 0.45, 0.5, np.pi, 0, np.pi],
+    [0.45, 0.36, 0.5, np.pi, 0, np.pi]
 ]
 place_pos = [
-    [0.32, -0.32, 0.2, np.pi, 0, np.pi],
-    [0.31, -0.31, 0.2, np.pi, 0, np.pi],
-    [0.32, -0.31, 0.2, np.pi, 0, np.pi],
-    [0.31, -0.32, 0.2, np.pi, 0, np.pi]
+    [0.36, -0.36, 0.5, np.pi, 0, np.pi],
+    [0.45, -0.45, 0.5, np.pi, 0, np.pi],
+    [0.36, -0.45, 0.5, np.pi, 0, np.pi],
+    [0.45, -0.36, 0.5, np.pi, 0, np.pi]
 ]
 # Shared list to store plan IDs
 plan_ids = []
