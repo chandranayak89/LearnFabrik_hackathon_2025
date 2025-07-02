@@ -1,0 +1,18 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@neura.com
+      name: Admin User
+      password: '$2b$12$KIXQ1QwQwQwQwQwQwQwQwOeQwQwQwQwQwQwQwQwQwQwQwQwQwQwQ'  # bcrypt hash for 'neura123'
+    operator:
+      email: operator@neura.com
+      name: Operator User
+      password: '$2b$12$KIXQ1QwQwQwQwQwQwQwQwOeQwQwQwQwQwQwQwQwQwQwQwQwQwQ'  # bcrypt hash for 'neura123'
+cookie:
+  expiry_days: 1
+  key: 'neura_secret'
+  name: 'neura_auth'
+preauthorized:
+  emails:
+    - admin@neura.com
+    - operator@neura.com 

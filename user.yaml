@@ -1,0 +1,11 @@
+   credentials:
+     usernames:
+       admin:
+         email: admin@neura.com
+         name: Admin User
+         password: '$2b$12$KIXQ1QwQwQwQwQwQwQwQwOeQwQwQwQwQwQwQwQwQwQwQwQwQwQ'  # bcrypt hash
+   cookie:
+     expiry_days: 1
+     key: 'neura_secret'
+     name: 'neura_auth'
+   

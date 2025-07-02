@@ -1,0 +1,14 @@
+workflow:
+  - action: move_to
+    params:
+      pose: inspection_pose
+  - action: plugin
+    name: MockSensorPlugin
+    input: "read_temperature"
+  - action: wait
+    seconds: 2
+  - action: plugin
+    name: HuggingFacePlugin
+    input: "Check part quality"
+  - action: speak
+    text: "Inspection completed" 
